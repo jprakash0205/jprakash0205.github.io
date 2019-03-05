@@ -5,4 +5,4 @@ show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 future: true
-timezone: TIMEZONE
+excerpt_separator: <!--more-->

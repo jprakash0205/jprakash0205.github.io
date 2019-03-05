@@ -1,8 +1,15 @@
 ---
 layout: default
 ---
-# Header 1
 
+## Articles
 
-[K means Clustering - Silhouette - R ](rseries/r_clus_kmeans_wh.nb.html)
-
+{% for category in site.categories %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {{ post.excerpt }}
+    {% endfor %}
+  </ul>
+{% endfor %}

@@ -1,5 +1,6 @@
 ---
 layout: default
+title:  "Posts"
 ---
 
 ## Articles
@@ -9,7 +10,7 @@ layout: default
   <ul>
     {% for post in category[1] %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {{ post.excerpt }}
+      <p>{{ post.excerpt | strip_html | truncatewords:75 }}</p>
     {% endfor %}
   </ul>
 {% endfor %}
